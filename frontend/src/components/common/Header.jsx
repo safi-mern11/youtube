@@ -9,7 +9,7 @@ const Header = () => {
       <div className="flex items-center gap-[16px] max-h-[20px]">
         <button
           onClick={() => {
-            setTheme("dark");
+            setTheme("light");
           }}
         >
           <img src="/images/common/menu.svg" alt="" />
