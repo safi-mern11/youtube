@@ -1,8 +1,8 @@
 "use client";
-import ChipBar from "@/components/common/ChipBar";
-import Video from "@/components/common/Video";
-import Add from "@/components/common/Add";
-import ShortsContainer from "@/components/common/ShortsContainer";
+import ChipBar from "@/app/components/common/ChipBar";
+import Video from "@/app/components/common/Video";
+import Add from "@/app/components/common/Add";
+import ShortsContainer from "./components/common/ShortsContainer";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
