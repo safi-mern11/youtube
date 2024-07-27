@@ -1,3 +1,5 @@
+
+
 export const content = {
   home: [
     {
@@ -20,8 +22,30 @@ export const content = {
           <path d="m12 4.44 7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <g>
+            <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z" />
+          </g>
+        </svg>
+      ),
+
       text: "Home",
-      route: "/home",
+      route: "/",
     },
     {
       icon: (
@@ -40,6 +64,24 @@ export const content = {
           aria-hidden="true"
         >
           <path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z" />
+        </svg>
+      ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="m17.77 10.32-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zM10 14.65v-5.3L15 12l-5 2.65z" />
         </svg>
       ),
       text: "Shorts",
@@ -65,10 +107,29 @@ export const content = {
           <path d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M20 7H4V6h16v1zm2 2v12H2V9h20zm-7 6-5-3v6l5-3zm2-12H7v1h10V3z" />
+        </svg>
+      ),
       text: "Subscriptions",
       route: "/subscriptions",
     },
-  ],
+  ]  ,
   you: [
     {
       icon: (
@@ -323,6 +384,26 @@ export const content = {
           <path d="M19 3.87v9.77C19 17.7 15.86 21 12 21s-7-3.3-7-7.37v-.13c0-1.06.22-2.13.62-3.09.5-1.19 1.29-2.21 2.27-2.97.85-.66 1.83-1.14 2.87-1.65.39-.19.77-.38 1.15-.58.36-.19.72-.38 1.08-.56v3.22l1.55-1.04L19 3.87M20 2l-6 4V3c-.85.44-1.7.88-2.55 1.33-1.41.74-2.9 1.34-4.17 2.32-1.13.87-2.02 2.05-2.58 3.37-.46 1.09-.7 2.29-.7 3.48v.14C4 18.26 7.58 22 12 22s8-3.74 8-8.36V2zM9.45 12.89 14 10v5.7c0 1.82-1.34 3.3-3 3.3s-3-1.47-3-3.3c0-1.19.58-2.23 1.45-2.81z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M14 6V3c-.85.44-1.7.88-2.55 1.33-1.41.74-2.9 1.34-4.17 2.32-1.13.87-2.02 2.05-2.58 3.37-.46 1.09-.7 2.29-.7 3.48v.14C4 18.26 7.58 22 12 22s8-3.74 8-8.36V2l-6 4zm0 9.7c0 1.82-1.34 3.3-3 3.3s-3-1.47-3-3.3c0-1.19.58-2.24 1.45-2.82L14 10v5.7z" />
+        </svg>
+      ),
+      route: "/explore/trending",
     },
     {
       text: "Music",
@@ -345,6 +426,26 @@ export const content = {
           <path d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7zM9 19c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm9-12h-5V5h5v2z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7z" />
+        </svg>
+      ),
+      route: "/explore/music",
     },
     {
       text: "Gaming",
@@ -367,6 +468,26 @@ export const content = {
           <path d="M10 12H8v2H6v-2H4v-2h2V8h2v2h2v2zm7 .5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm3-3c0-.83-.67-1.5-1.5-1.5S17 8.67 17 9.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm-3.03-4.35-4.5 2.53-.49.27-.49-.27-4.5-2.53L3 7.39v6.43l8.98 5.04 8.98-5.04V7.39l-3.99-2.24m0-1.15 4.99 2.8v7.6L11.98 20 2 14.4V6.8L6.99 4l4.99 2.8L16.97 4z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="m16.97 4-4.99 2.8L6.99 4 2 6.8v7.6l9.98 5.6 9.98-5.6V6.8L16.97 4zM10 12H8v2H6v-2H4v-2h2V8h2v2h2v2zm5.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 8 18.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+        </svg>
+      ),
+      route: "/explore/gaming",
     },
     {
       text: "News",
@@ -389,6 +510,26 @@ export const content = {
           <path d="M11 11v6H7v-6h4m1-1H6v8h6v-8zM3 3.03V21h14l4-4V3.03M20 4v11.99l-.01.01H16v3.99l-.01.01H4V4h16zm-2 4H6V6h12v2zm0 7h-5v-2h5v2zm0-3h-5v-2h5v2z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M3 3.03V21h14l4-4V3.03H3zM6 6h12v2H6V6zm7 9v-2h5v2h-5zm0-3v-2h5v2h-5zm-1 6H6v-8h6v8zm4-2h3.99L16 19.99V16z" />
+        </svg>
+      ),
+      route: "/explore/news",
     },
     {
       text: "Sports",
@@ -410,6 +551,25 @@ export const content = {
           <path d="M18 5V2H6v3H3v6l3.23 1.61c.7 2.5 2.97 4.34 5.69 4.38L8 19v3h8v-3l-3.92-2.01c2.72-.04 4.99-1.88 5.69-4.38L21 11V5h-3zM6 11.38l-2-1V6h2v5.38zM15 21H9v-1.39l3-1.54 3 1.54V21zm2-10c0 2.76-2.24 5-5 5s-5-2.24-5-5V3h10v8zm3-.62-2 1V6h2v4.38z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M18 5V2H6v3H3v6l3.23 1.61c.7 2.5 2.97 4.34 5.69 4.38L8 19v3h8v-3l-3.92-2.01c2.72-.04 4.99-1.88 5.69-4.38L21 11V5h-3zM6 11.38l-2-1V6h2v5.38zm14-1-2 1V6h2v4.38z" />
+        </svg>
+      ),
+      route: "/explore/sports",
     },
   ],
   setting: [
@@ -434,6 +594,25 @@ export const content = {
           <path d="M12 9.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m0-1c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zM13.22 3l.55 2.2.13.51.5.18c.61.23 1.19.56 1.72.98l.4.32.5-.14 2.17-.62 1.22 2.11-1.63 1.59-.37.36.08.51c.05.32.08.64.08.98s-.03.66-.08.98l-.08.51.37.36 1.63 1.59-1.22 2.11-2.17-.62-.5-.14-.4.32c-.53.43-1.11.76-1.72.98l-.5.18-.13.51-.55 2.24h-2.44l-.55-2.2-.13-.51-.5-.18c-.6-.23-1.18-.56-1.72-.99l-.4-.32-.5.14-2.17.62-1.21-2.12 1.63-1.59.37-.36-.08-.51c-.05-.32-.08-.65-.08-.98s.03-.66.08-.98l.08-.51-.37-.36L3.6 8.56l1.22-2.11 2.17.62.5.14.4-.32c.53-.44 1.11-.77 1.72-.99l.5-.18.13-.51.54-2.21h2.44M14 2h-4l-.74 2.96c-.73.27-1.4.66-2 1.14l-2.92-.83-2 3.46 2.19 2.13c-.06.37-.09.75-.09 1.14s.03.77.09 1.14l-2.19 2.13 2 3.46 2.92-.83c.6.48 1.27.87 2 1.14L10 22h4l.74-2.96c.73-.27 1.4-.66 2-1.14l2.92.83 2-3.46-2.19-2.13c.06-.37.09-.75.09-1.14s-.03-.77-.09-1.14l2.19-2.13-2-3.46-2.92.83c-.6-.48-1.27-.87-2-1.14L14 2z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <path d="M19.56 12c0-.39-.03-.77-.09-1.14l2.19-2.13-2-3.46-2.92.83c-.6-.48-1.27-.87-2-1.14L14 2h-4l-.74 2.96c-.73.27-1.4.66-2 1.14l-2.92-.83-2 3.46 2.19 2.13c-.06.37-.09.75-.09 1.14s.03.77.09 1.14l-2.19 2.13 2 3.46 2.92-.83c.6.48 1.27.87 2 1.14L10 22h4l.74-2.96c.73-.27 1.4-.66 2-1.14l2.92.83 2-3.46-2.19-2.13c.06-.37.09-.75.09-1.14zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+        </svg>
+      ),
+      route: "/settings",
     },
     {
       name: "Report history",
@@ -456,6 +635,28 @@ export const content = {
           <path d="m13.18 4 .24 1.2.16.8H19v7h-5.18l-.24-1.2-.16-.8H6V4h7.18M14 3H5v18h1v-9h6.6l.4 2h7V5h-5.6L14 3z" />
         </svg>
       ),
+      selectedIcon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          enableBackground="new 0 0 24 24"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          focusable="false"
+          style={{
+            pointerEvents: "none",
+            display: "inherit",
+            width: "100%",
+            height: "100%",
+          }}
+          aria-hidden="true"
+        >
+          <g>
+            <path d="M14 3H5v18h1v-9h6.6l.4 2h7V5h-5.6L14 3z" />
+          </g>
+        </svg>
+      ),
+      route: "/settings/report-hitory",
     },
     {
       name: "Help",

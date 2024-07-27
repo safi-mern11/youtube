@@ -1,16 +1,35 @@
 "use client";
-import { useTheme } from "next-themes";
-import React from "react";
-import Sidebar from "./sidebar/Sidebar";
+import React, { useState } from "react";
+import Sidebar from "../sidebar/AbsoluteSidebar";
+import { usePathname } from "next/navigation";
+import SimpleSidebar from "../sidebar/SimpleSidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/lib/redux/store";
+import { toggle } from "@/lib/redux/slices/SidebarSlices";
+import Notifications from "./Notifications";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
-  const { setTheme, theme } = useTheme();
+  const path = usePathname();
+  const { isOpen } = useSelector((state: RootState) => state.sidebarToggle);
+  const dispatch = useDispatch();
+  const [notificationToggle, setNotificationToggle] = useState(false);
   return (
     <>
-      <Sidebar />
-      <header className="flex justify-between items-center min-h-[56px] max-h-[56px] px-4">
-        <div className="flex items-center gap-[16px] max-h-[20px]">
-          <button>
+      <Notifications isVisible={notificationToggle} />
+      {path.includes("setting") || path.includes("info") ? (
+        <Sidebar sidebarToggle={isOpen} />
+      ) : (
+        <SimpleSidebar sidebarToggle={isOpen} />
+      )}
+
+      <header className="flex justify-between items-center min-h-[56px] max-h-[56px] px-4 fixed w-full bg-white z-10">
+        <div className="flex items-center gap-[16px] max-h-[20px] pl-[12px]">
+          <button
+            onClick={() => {
+              dispatch(toggle());
+            }}
+          >
             <img
               src="/images/common/light-menu.svg"
               alt=""
@@ -109,26 +128,60 @@ const Header = () => {
               </g>
             </svg>
           </button>
-          <button className="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              enableBackground="new 0 0 24 24"
-              height={30}
-              viewBox="0 0 24 24"
-              width={30}
-              focusable="false"
-              style={{
-                pointerEvents: "none",
-                display: "inherit",
-                width: "100%",
-                height: "100%",
-              }}
-              aria-hidden="true"
-            >
-              <path d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z" />
-            </svg>
+          <button
+            onClick={
+              !notificationToggle
+                ? () => {
+                    disableBodyScroll(
+                      document.getElementById("youtube") as any
+                    );
+                    setNotificationToggle(true);
+                  }
+                : () => {
+                    enableBodyScroll(document.getElementById("youtube") as any);
+                    setNotificationToggle(false);
+                  }
+            }
+          >
+            {notificationToggle ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enableBackground="new 0 0 24 24"
+                height={30}
+                viewBox="0 0 24 24"
+                width={30}
+                focusable="false"
+                style={{
+                  pointerEvents: "none",
+                  display: "inherit",
+                  width: "100%",
+                  height: "100%",
+                }}
+                aria-hidden="true"
+              >
+                <path d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87z" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enableBackground="new 0 0 24 24"
+                height={30}
+                viewBox="0 0 24 24"
+                width={30}
+                focusable="false"
+                style={{
+                  pointerEvents: "none",
+                  display: "inherit",
+                  width: "100%",
+                  height: "100%",
+                }}
+                aria-hidden="true"
+              >
+                <path d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z" />
+              </svg>
+            )}
           </button>
-          <button>
+          <button className="pr-[12px]">
             <img
               id="img"
               className="rounded-full overflow-hidden"
@@ -140,6 +193,7 @@ const Header = () => {
           </button>
         </div>
       </header>
+      <div className="pb-[56px]" />
     </>
   );
 };
