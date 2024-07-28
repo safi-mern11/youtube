@@ -1,10 +1,11 @@
 import React from "react";
 import SidebarContent from "./SidebarContent";
-import { content } from "@/lib/sidebar-content";
-import { usePathname } from "next/navigation";
+import { content } from "@/utils/sidebarContent";
+import { usePathname, useRouter } from "next/navigation";
 
 const SimpleSidebar = ({ sidebarToggle }: { sidebarToggle: boolean }) => {
   const path = usePathname();
+  const router = useRouter();
   return (
     <>
       <div
@@ -18,19 +19,31 @@ const SimpleSidebar = ({ sidebarToggle }: { sidebarToggle: boolean }) => {
           <div className="pt-[13px] flex flex-col justify-center items-center">
             {content.home.map((item, index) => (
               <button
+                onClick={() => {
+                  router.push(item.route);
+                }}
                 key={index + "contentkey"}
                 className="flex flex-col gap-[5px] justify-center items-center py-[12px] hover:bg-[#ddd] max-w-[65px] w-full rounded-[10px]"
               >
                 <div className="w-[24px] h-[24px]">
                   {" "}
-                  {path == item.route
-                    ? (item as any).selectedIcon || item.icon
+                  {index !== 1
+                    ? path == item.route
+                      ? item.selectedIcon
+                      : item.icon
+                    : path.includes("shorts")
+                    ? item.selectedIcon
                     : item.icon}
                 </div>
                 <p className="text-[10px] font-medium">{item.text}</p>
               </button>
             ))}
-            <button className="flex flex-col gap-[5px] justify-center items-center py-[10px] hover:bg-[#ddd] max-w-[65px] w-full rounded-[10px]">
+            <button
+              onClick={() => {
+                router.push("/you");
+              }}
+              className="flex flex-col gap-[5px] justify-center items-center py-[10px] hover:bg-[#ddd] max-w-[65px] w-full rounded-[10px]"
+            >
               <div className="w-[24px] h-[24px]">
                 {path == "/you" ? (
                   <svg

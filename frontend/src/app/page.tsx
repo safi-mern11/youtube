@@ -2,11 +2,11 @@
 
 import { useTheme } from "next-themes";
 import { useState } from "react";
-import ChipBar from "./components/common/ChipBar";
+import ChipBar from "./components/home/ChipBar";
 // import { Video } from "lucide-react";
-import Add from "./components/common/Add";
-import ShortsContainer from "./components/common/ShortsContainer";
-import Video from "./components/common/Video";
+import Add from "./components/home/Add";
+import ShortsContainer from "./components/home/ShortsContainer";
+import Video from "./components/home/Video";
 import SidebarPadding from "./components/common/sidebar/SidebarPadding";
 
 type video = {
@@ -57,7 +57,7 @@ export default function Home() {
     new videoClass(
       1,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -67,7 +67,7 @@ export default function Home() {
     new videoClass(
       2,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -77,7 +77,7 @@ export default function Home() {
     new videoClass(
       3,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -87,7 +87,7 @@ export default function Home() {
     new videoClass(
       4,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -97,7 +97,7 @@ export default function Home() {
     new videoClass(
       5,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -107,7 +107,7 @@ export default function Home() {
     new videoClass(
       6,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -117,7 +117,7 @@ export default function Home() {
     new videoClass(
       7,
       "My First 100 Games of Fortnite",
-      "https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw",
+      "/images/home/thumnail.png",
       "https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj",
       "TheOdd1sOut",
       "2.9M views",
@@ -137,7 +137,7 @@ export default function Home() {
             title="My First 100 Games of Fortnite"
             Sponsored="TheOdd1sOut"
             logo="https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj"
-            thumbnail="https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw"
+            thumbnail="/images/home/thumnail.png"
           />
           {videos.map((video) => {
             return (
@@ -165,7 +165,7 @@ export default function Home() {
             title="My First 100 Games of Fortnite"
             Sponsored="TheOdd1sOut"
             logo="https://yt3.ggpht.com/gopbHeiDtEB932rIFqLlR4D_hFtd-BcdGrQgGeyDpkD3guskkbT74DsJYPGo3x7MqkyqtgL-=s88-c-k-c0x00ffffff-no-rj"
-            thumbnail="https://i.ytimg.com/vi/7KDWBkmRRIo/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFIofzAP&rs=AOn4CLDGJFvzvOMcJq15TlKiXNFmSZLkpw"
+            thumbnail="/images/home/thumnail.png"
           />
           {videos.map((video) => {
             return (

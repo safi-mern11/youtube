@@ -1,14 +1,14 @@
+"use client";
 import React from "react";
 
-const Notifications = ({ isVisible }: { isVisible: boolean }) => {
+const Notifications = () => {
   return (
     <div
-      className={`absolute top-[60px] right-[100px] flex flex-col justify-center font-semibold bg-white max-w-[479px] w-full z-[50] ${
-        isVisible ? "" : "hidden"
-      } duration-300 ease-in-out transition-all border rounded-[10px]`}
+      id="notificationBox"
+      className="flex flex-col justify-center font-semibold bg-white max-w-[479px] min-w-[479px] rounded-[10px]"
     >
       <div className="flex flex-col justify-center w-full bg-black bg-opacity-0">
-        <div className="flex relative flex-col pb-2.5 w-full min-h-[639px]">
+        <div className="flex relative flex-col w-full min-h-[639px]">
           <div className="flex relative flex-col pt-4 pb-px w-full text-sm whitespace-nowrap bg-black bg-opacity-0 text-stone-500">
             <div className="flex gap-5 justify-between self-center px-5 w-full max-w-[486px]">
               <div>Notifications</div>
@@ -34,21 +34,23 @@ const Notifications = ({ isVisible }: { isVisible: boolean }) => {
             </div>
             <div className="mt-3.5 w-full bg-neutral-200 min-h-[1px]" />
           </div>
-          <div className="flex relative flex-col items-center px-5 pt-8 pb-1.5 mt-36 w-full bg-black bg-opacity-0">
+          <div
+            className="flex relative flex-col items-center px-5 pt-[220px] pb-[200px] w-full bg-black bg-opacity-0  overflow-y-auto"
+            style={{ maxHeight: "calc(100vh - 112px)" }}
+          >
             <img
               loading="lazy"
               src="/images/common/notification-bell.png"
               className="w-20 aspect-[0.79]"
             />
-            <div className="mt-10 text-sm text-neutral-500">
+            <div className="mt-5 text-sm text-neutral-500">
               Your notifications live here
             </div>
-            <div className="mt-6 text-xs text-center text-zinc-500 w-[258px]">
+            <div className="mt-2 text-xs text-center text-zinc-500 w-[258px]">
               Subscribe to your favorite channels to get
               <br />
               notified about their latest videos.
             </div>
-            <div className="self-stretch mt-52 w-full bg-white min-h-[1px]" />
           </div>
         </div>
       </div>

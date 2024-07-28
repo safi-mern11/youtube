@@ -1,34 +1,54 @@
-import { content, links } from "@/lib/sidebar-content";
+import { content, links } from "@/utils/sidebarContent";
 import { icons } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const SidebarContent = () => {
   const path = usePathname();
+  const router = useRouter();
+  console.log(path.split("/")[1], "path");
   return (
     <>
-      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] pb-[10px] px-[18px]">
+      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] pb-[10px] px-[14px]">
         {content.home.map((item, index) => (
           <button
+            onClick={() => {
+              router.push(item.route);
+            }}
             key={index + "constenthome"}
-            className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
-              path == item.route ? "bg-[#ddd]" : ""
+            className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+              index !== 1
+                ? path == item.route
+                  ? "bg-[#ddd]"
+                  : ""
+                : path.includes("shorts")
+                ? "bg-[#ddd]"
+                : ""
             }`}
           >
             <div className="w-[24px] h-[24px]">
-              {path == item.route ? item.selectedIcon : item.icon}
+              {index !== 1
+                ? path == item.route
+                  ? item.selectedIcon
+                  : item.icon
+                : path.includes("shorts")
+                ? item.selectedIcon
+                : item.icon}
             </div>
-            {item.text}
+            <p className="text-[14px] font-medium leading-[20px]">
+              {item.text}
+            </p>
           </button>
         ))}
       </div>
-      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[18px]">
+      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[14px]">
         <button
           className={`flex gap-[2px] items-center min-h-[40px] text-[18px] rounded-[10px] pl-[12px] hover:bg-[#ddd] font-medium ${
             path == "/you" && "bg-[#ddd]"
           }`}
         >
-          You
+          <p className="text-[16px] font-medium leading-[20px]">You</p>
+
           <div className="w-[17px] h-[17px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,27 +71,31 @@ const SidebarContent = () => {
         {content.you.map((item, index) => (
           <button
             key={index + "subscription"}
-            className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+            className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
               path == item.route ? "bg-[#ddd]" : ""
             }`}
           >
             <div className="w-[24px] h-[24px]">{item.icon}</div>
-            {item.text}
+            <p className="text-[14px] font-medium leading-[20px]">
+              {item.text}
+            </p>
           </button>
         ))}
       </div>
-      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[18px]">
+      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[14px]">
         <button
           className={`flex gap-[2px] items-center min-h-[40px] text-[18px] font-medium pl-[12px] hover:bg-[#ddd] rounded-[10px] ${
             path == "/subscriptions" ? "bg-[#ddd]" : ""
           }`}
         >
-          Subscriptions
+          <p className="text-[16px] font-medium leading-[20px]">
+            Subscriptions
+          </p>
         </button>
         {content.subscription.map((item, index) => (
           <button
             key={index + "subscription"}
-            className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+            className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
               path == (item as any).route ? "bg-[#ddd]" : ""
             }`}
           >
@@ -80,11 +104,13 @@ const SidebarContent = () => {
                 ? (item as any).selectedIcon || item.icon
                 : item.icon}
             </div>
-            {item.channelName}
+            <p className="text-[14px] font-medium leading-[20px]">
+              {item.channelName}
+            </p>
           </button>
         ))}
         <button
-          className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+          className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
             path == "" ? "bg-[#ddd]" : ""
           }`}
         >
@@ -106,21 +132,21 @@ const SidebarContent = () => {
               <path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z" />
             </svg>
           </div>
-          See More
+          <p className="text-[14px] font-medium leading-[20px]">See More</p>
         </button>
       </div>
-      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[18px]">
+      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[14px]">
         <button
           className={`flex gap-[2px] items-center min-h-[40px] text-[18px] font-medium pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
             path == "/explore" ? "bg-[#ddd]" : ""
           }`}
         >
-          Explore
+          <p className="text-[16px] font-medium leading-[20px]">Explore</p>
         </button>
         {content.explore.map((item, index) => (
           <button
             key={index + "subscription"}
-            className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+            className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
               path == item.route ? "bg-[#ddd]" : ""
             }`}
           >
@@ -130,15 +156,17 @@ const SidebarContent = () => {
                 ? (item as any).selectedIcon || item.icon
                 : item.icon}
             </div>
-            {item.text}
+            <p className="text-[14px] font-medium leading-[20px]">
+              {item.text}
+            </p>
           </button>
         ))}
       </div>
-      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[18px]">
+      <div className="flex flex-col gap-[2px] border-b border-[#0000001a] py-[10px] px-[14px]">
         {content.setting.map((item, index) => (
           <button
             key={index + "subscription"}
-            className={`flex gap-[24px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
+            className={`flex gap-[20px] items-center min-h-[40px] pl-[12px] rounded-[10px] hover:bg-[#ddd] ${
               path == item.route ? "bg-[#ddd]" : ""
             }`}
           >
@@ -148,7 +176,9 @@ const SidebarContent = () => {
                 ? (item as any).selectedIcon || item.icon
                 : item.icon}
             </div>
-            {item.name}
+            <p className="text-[14px] font-medium leading-[20px]">
+              {item.name}
+            </p>
           </button>
         ))}
       </div>
