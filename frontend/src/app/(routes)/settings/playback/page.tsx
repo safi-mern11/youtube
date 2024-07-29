@@ -1,6 +1,6 @@
-import Head from "../components/Head"
-import { Checkbox } from "../../../components/ui/Checkbox"
-import Tooltip from "../components/Tooltip"
+import Head from "@/app/components/settings/Head"
+import { Checkbox } from "@/app/components/ui/Checkbox"
+import Tooltip from "@/app/components/settings/Tooltip"
 import { RadioGroup, RadioGroupItem } from "@/app/components/ui/Radio"
 import { Switch } from "@/app/components/ui/Switch"
 

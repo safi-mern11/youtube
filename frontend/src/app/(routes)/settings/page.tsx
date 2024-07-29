@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Head from "./components/Head"
+import Head from "@/app/components/settings/Head"
 
 function page() {
   return (

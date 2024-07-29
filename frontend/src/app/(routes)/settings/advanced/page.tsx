@@ -1,5 +1,4 @@
-import Head from "../components/Head"
-
+import Head from "@/app/components/settings/Head"
 function page() {
   return (
     <div className="pl-[240px] overflow-x-hidden">
@@ -34,7 +33,7 @@ function page() {
           <div className="py-[20px] mt-[20px] flex gap-[56px]">
             <h1 className="max-w-[160px] font-semibold text-[14px] text-[#0F0F0F] w-full">Move channel</h1>
             <div>
-              <h1 className="text-[14px] text-[#065FD4] font-semibold">Move channel to a brand account</h1>
+              <h1 className="text-[14px] cursor-pointer text-[#065FD4] font-semibold">Move channel to a brand account</h1>
               <p className="text-[14px] text-[#606060]">You can move your channel to a brand account</p>
             </div>
           </div>
@@ -42,7 +41,7 @@ function page() {
           <div className="py-[20px] mt-[20px] flex gap-[56px]">
             <h1 className="max-w-[160px] font-semibold text-[14px] text-[#0F0F0F] w-full">Delete channel</h1>
             <div>
-              <h1 className="text-[14px] text-[#065FD4] font-semibold">Delete channel</h1>
+              <h1 className="text-[14px] cursor-pointer text-[#065FD4] font-semibold">Delete channel</h1>
               <p className="text-[14px] text-[#606060]">Deleting your YouTube channel won't close your Google Account</p>
             </div>
           </div>
@@ -50,7 +49,7 @@ function page() {
           <div className="py-[20px] mt-[20px] mb-[37px] flex gap-[56px]">
             <h1 className="max-w-[160px] font-semibold text-[14px] text-[#0F0F0F] w-full">Try experimental new features</h1>
             <div>
-              <h1 className="text-[14px] text-[#065FD4] font-semibold">Try new features with YouTube Premium</h1>
+              <h1 className="text-[14px] cursor-pointer text-[#065FD4] font-semibold">Try new features with YouTube Premium</h1>
               <p className="text-[14px] text-[#606060]">For a limited time, Premium members can try out new features that we’re working on</p>
             </div>
           </div>

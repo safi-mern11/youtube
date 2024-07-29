@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../../globals.css";
-import { ThemeProvider } from "../../components/common/ThemeProvider";
-import Header from "../../components/common/Header";
-import Sidebar from "./components/Sidebar";
+import "../../styles/globals.css";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import Sidebar from "@/app/components/settings/Sidebar";
+import Header from "@/app/components/common/header";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/youtube.png" type="image/png" />
-      </head>
-      <body className={`${inter.className}`}>
+    
+      <div className={`${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -33,7 +30,6 @@ export default function RootLayout({
             <Sidebar />
           {children}
         </ThemeProvider>
-      </body>
-    </html>
+      </div>
   );
 }

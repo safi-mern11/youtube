@@ -1,5 +1,5 @@
-import Button from "../components/Button"
-import Head from "../components/Head"
+import Button from "@/app/components/settings/Button"
+import Head from "@/app/components/settings/Head"
 import { RadioGroup, RadioGroupItem } from "@/app/components/ui/Radio"
 
 function page() {

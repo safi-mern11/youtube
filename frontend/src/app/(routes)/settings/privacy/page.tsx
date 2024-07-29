@@ -1,4 +1,4 @@
-import Head from "../components/Head"
+import Head from "@/app/components/settings/Head"
 import { Switch } from "@/app/components/ui/Switch"
 
 function page() {

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "./components/common/ThemeProvider";
-import Header from "./components/common/Header";
-
+import "./styles/globals.css";
+import { ThemeProvider } from "../providers/ThemeProvider";
+import Header from "./components/common/header";
+import StoreProvider from "../providers/StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,15 +23,17 @@ export default function RootLayout({
         <link rel="icon" href="/youtube.png" type="image/png" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+        <StoreProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <div>{children}</div>
+          </ThemeProvider>
+        </StoreProvider>
       </body>
     </html>
   );

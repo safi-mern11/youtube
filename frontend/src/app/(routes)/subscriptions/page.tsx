@@ -66,7 +66,7 @@ function Subscriptions() {
                                     <p className='flex text-[#606060] text-[12px]'>{channelDescription}</p>
                                 </div>
 
-                                <DropdownMenu>
+                                <DropdownMenu modal={false}>
                                     <DropdownMenuTrigger className="outline-none max-w-[150px] w-full">
                                         <div className='text-[#0F0F0F] cursor-pointer relative  items-center justify-center flex bg-[#0000000d] rounded-[18px] h-fit text-[12px] px-[16px] gap-[6px] leading-[36px] font-medium'>
                                             <img className='absolute left-2.5 max-h-[24px]' src="./images/common/notifications-enabled.svg" />
