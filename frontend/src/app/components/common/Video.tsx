@@ -57,7 +57,7 @@ function Video({ id, thumbnail, logo, title, channelName, views, uploaded, optio
                             <img className="max-w-[24px] outline-none w-full max-h-[24px]" src="./images/common/video-option.svg" />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="bg-white rounded-[12px] border-none max-w-[254px] w-full  px-0 py-[8px]">
-                            <div className="border-b-[1px] border-solid border-[#0000001a] pb-[8px]">
+                            <div className="border-b-[1px] border-solid max-w-[254px] w-full border-[#0000001a] pb-[8px]">
                             <DropdownMenuItem className="text-[#0F0F0F] rounded-none hover:bg-[#dbdbdb] m-0 pl-[16px] pr-[12px] flex items-center gap-[16px] cursor-pointer">
                                 <img src="./images/common/que.svg" />
                                 <p>Add to queue</p>

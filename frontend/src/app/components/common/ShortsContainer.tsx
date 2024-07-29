@@ -7,7 +7,7 @@ function ShortsContainer() {
                 <img src="./images/common/shorts-logo.svg" />
                 <h1 className="font-bold text-[#0F0F0F] text-[20px]">Shorts</h1>
             </div>
-            <div className="flex mb-[25px]">
+            <div className="flex gap-[20px] mb-[25px]">
                 <Short thumbnail="https://i.ytimg.com/vi/on-DqpH2zTs/oardefault.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDCtMnLf-kddwkyM4tLzJOMxF7BLw" title="Tanjiro's ability to learn any Breathing Styles! Demon..." views="2.1M" />
                 <Short thumbnail="https://i.ytimg.com/vi/on-DqpH2zTs/oardefault.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDCtMnLf-kddwkyM4tLzJOMxF7BLw" title="Tanjiro's ability to learn any Breathing Styles! Demon..." views="2.1M" />
                 <Short thumbnail="https://i.ytimg.com/vi/on-DqpH2zTs/oardefault.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDCtMnLf-kddwkyM4tLzJOMxF7BLw" title="Tanjiro's ability to learn any Breathing Styles! Demon..." views="2.1M" />

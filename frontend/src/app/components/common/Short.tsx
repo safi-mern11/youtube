@@ -8,7 +8,7 @@ interface ShortInterface {
 
 function Short({ title, thumbnail, views }: ShortInterface) {
     return (
-        <div className="max-w-[255px] cursor-pointer mx-[10px] w-full min-h-[389px]">
+        <div className="max-w-[255px] cursor-pointer w-full min-h-[389px]">
             <img className="rounded-[16px] " src={thumbnail} />
             <div className="flex relative pt-[12px] pr-[24px]">
                 <h1 className="font-semibold text-[#0F0F0F] mb-[2px] text-[14px]">{title}</h1>

@@ -31,7 +31,7 @@ function Add({ title, logo, thumbnail, Sponsored }: AddInterface) {
                         </div>
                     </div>
                 </div>
-                <button className="">
+                <button className="self-start">
                     <img src="./images/common/video-option.svg" />
                 </button>
             </div>
